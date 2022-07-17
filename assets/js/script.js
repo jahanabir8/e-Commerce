@@ -13,16 +13,20 @@ $(".cross__btn").click(function(){
 
 var swiper = new Swiper(".banner__swiper", {
   spaceBetween: 30,
+  loop: true,
   effect: "fade",
+  autoplay: 
+  {
+    delay: 3000
+  },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    // autoplay: true,
+    prevEl: ".swiper-button-prev"
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
 });
 
 
@@ -32,7 +36,6 @@ var swiper = new Swiper(".gallery__swiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   slidesPerGroup: 1,
-  loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination",
@@ -46,24 +49,16 @@ var swiper = new Swiper(".gallery__swiper", {
   breakpoints: {
     
     1024: {
-      slidesPerView: 4,
-      // spaceBetween: 40,
-      // slidesPerColumn: 4,
+      slidesPerView: 4
     },
     768: {
-      slidesPerView: 3,
-      // spaceBetween: 30,
-      // slidesPerColumn: 3,
+      slidesPerView: 3
     },
     575: {
-      slidesPerView: 2,
-      // spaceBetween: 20,
-      // slidesPerColumn: 2,
+      slidesPerView: 2
     },
     320: {
-      slidesPerView: 1,
-      // spaceBetween: 10,
-      // slidesPerColumn: 1,
+      slidesPerView: 1
     }
     
 
@@ -89,5 +84,54 @@ tabs.forEach(tab => {
     target.classList.add('active')
   })
 })
+
+
+// customers review
+var swiper = new Swiper(".review__Swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop:true,
+  autoplay: 
+    {
+      delay: 2000,
+    }
+});
     
+// footer swiper
+var swiper = new Swiper(".footer__swiper", {
+  slidesPerView: 7,
+  slidesPerGroup: 1,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop:true,
+  autoplay: 
+    {
+      delay: 2000,
+    },
+
+  breakpoints: {
+    
+    1024: {
+      slidesPerView: 7
+    },
+    768: {
+      slidesPerView: 4
+    },
+    575: {
+      slidesPerView: 3
+    },
+    320: {
+      slidesPerView: 2
+    }
+    
+
+  }
+
+
+});
 
